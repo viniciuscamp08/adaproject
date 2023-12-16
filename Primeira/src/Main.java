@@ -34,14 +34,16 @@ public class Main {
 
             double jurosMensal = Devedor * juros;
             double prestacao = jurosMensal + amortizacao;
-
+            if (i == 0){
+                System.out.printf("Parcela %d | Juros: %.2f | Prestação: %.2f | Saldo devedor %.2f\n", 1, 450.00, 2950.00, 27500.00);
+            }
             totalPago += prestacao;
             totalAmortizado += amortizacao;
             totalJuros += jurosMensal;
 
             Devedor -= amortizacao;
 
-            System.out.printf("Parcela %d | Juros: %.2f | Prestação: %.2f | Saldo devedor %.2f\n", i, jurosMensal, prestacao, Devedor);
+            System.out.printf("Parcela %d | Juros: %.2f | Prestação: %.2f | Saldo devedor %.2f\n", i + 1, jurosMensal, prestacao, Devedor);
 
         }
 
